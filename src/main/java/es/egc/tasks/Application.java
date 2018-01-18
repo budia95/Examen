@@ -18,6 +18,7 @@ public class Application {
     @Bean
     CommandLineRunner init(TaskRepository taskService) {
         return (evt) -> {
+
             logger.info("Initializing task-manager");
 		
             taskService.save(new Task("Add pom.xml", "Exam"));
